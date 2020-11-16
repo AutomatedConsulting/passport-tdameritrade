@@ -1,0 +1,27 @@
+{
+  "name": "passport-tdameritrade",
+  "version": "0.0.0",
+  "description": "Passport strategy for authentication with TD Ameritrade (http://tdameritrade.com/)",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonestrike/passport-tdameritrade.git"
+  },
+  "keywords": [
+    "passport",
+    "tdameritrade",
+    "auth",
+    "authentication",
+    "authn",
+    "identity"
+  ],
+  "author": "Tony Giorgi <tony@automated.consulting> (http://tonestrike.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonestrike/passport-tdameritrade/issues"
+  },
+  "homepage": "https://github.com/tonestrike/passport-tdameritrade#readme",
+  "dependencies": {
+    "passport-oauth2": "^1.5.0"
+  }
+}
