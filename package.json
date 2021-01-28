@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tonestrike/passport-tdameritrade.git"
+    "url": "git+https://github.com/AutomatedConsulting/passport-tdameritrade.git"
   },
   "keywords": [
     "passport",
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/tonestrike/passport-tdameritrade/issues"
   },
-  "homepage": "https://github.com/tonestrike/passport-tdameritrade#readme",
+  "homepage": "https://github.com/AutomatedConsulting/passport-tdameritrade#readme",
   "dependencies": {
     "passport-oauth2": "^1.5.0"
   }
