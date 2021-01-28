@@ -1,9 +1,8 @@
 # passport-tdameritrade
-**This is a work in progress and not ready for production use.**
 
 Passport strategy for authentication with [TD Ameritrade](https://developer.tdameritrade.com/apis) through the OAuth 2.0 API.
 
-Before using this strategy, it is strongly recommended that you read through the official docs page [here](https://developer.tdameritrade.com/authentication/apis), especially about the scopes and understand how the auth works.
+Before using this strategy, it is strongly recommended that you read through the official docs page [here](https://developer.tdameritrade.com/authentication/apis).
 
 ## Usage
 `npm install passport-tdameritrade --save`
@@ -13,12 +12,9 @@ Before using this strategy, it is strongly recommended that you read through the
 ```javascript
 var TDAmeritradeStrategy = require('passport-tdameritrade').Strategy;
 
-var scopes = ['PlaceTrades', 'AccountAccess', 'MoveMoney'];
-
 passport.use(new TDAmeritradeStrategy({
     clientID: 'id',
-    callbackURL: 'callbackURL',
-    scope: scopes
+    callbackURL: 'callbackURL'
 },
 function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ tdameritradeId: profile.id }, function(err, user) {
