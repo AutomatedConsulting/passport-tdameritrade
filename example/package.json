@@ -10,6 +10,7 @@
   "author": "Tony Giorgi <tony@automated.consulting> (https://github.com/tonestrike)",
   "license": "ISC",
   "dependencies": {
+    "dotenv-safe": "^8.2.0",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "passport": "^0.3.2"

@@ -2,7 +2,10 @@ var express  = require('express')
   , session  = require('express-session')
   , passport = require('passport')
   , Strategy = require('../lib').Strategy
-  , app      = express();
+  , app      = express()
+  , dotenv   = require('dotenv-safe');
+
+dotenv.config()  
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -14,8 +17,8 @@ passport.deserializeUser(function(obj, done) {
 var scopes = ['PlaceTrades', 'AccountAccess', 'MoveMoney'];
 
 passport.use(new Strategy({
-    clientID: '',
-    clientSecret: '',
+    clientID: process.env.TD_AMERITRADE_CLIENT_ID,
+    clientSecret: process.env.TD_AMERITRADE_CLIENT_SECRET,
     callbackURL: 'http://localhost:5000/callback',
     scope: scopes
 }, function(accessToken, refreshToken, profile, done) {
