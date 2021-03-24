@@ -36,6 +36,19 @@ app.get('/auth/tdameritrade/callback', passport.authenticate('tdameritrade', {
     res.redirect('/secretstuff') // Successful auth
 });
 ```
+
+#### Refresh Token Requests
+Some OAuth2 providers require `access_type` set to `offline` to return a refresh token. You can do this by adding `accessType: 'offline'` into the `/callback` options.
+
+```javascript
+app.get('/auth/tdameritrade/callback', passport.authenticate('tdameritrade', {
+    failureRedirect: '/',
+    accessType: 'offline' // add it here
+}), function(req, res) {
+    res.redirect('/secretstuff') 
+});
+```
+
 #### Refresh Token Usage
 In some use cases where the profile may be fetched more than once or you want to keep the user authenticated, refresh tokens may wish to be used. A package such as `passport-oauth2-refresh` can assist in doing this.
 
